@@ -117,7 +117,7 @@ function getSearchMethod(searchTerm){
  async function searchWeather(searchTerm){
     try{
         getSearchMethod(searchTerm);
-    let resp = await fetch(`http://api.openweathermap.org/data/2.5/weather?${id}=${searchTerm}&appid=${apikey}&units=${units}`)
+    let resp = await fetch(`https://api.openweathermap.org/data/2.5/weather?${id}=${searchTerm}&appid=${apikey}&units=${units}`)
     let data = await resp.json();
     //console.log(data);
     Init(data);
